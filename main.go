@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"strings"
@@ -29,7 +28,7 @@ func addMe(c echo.Context) error {
 		return c.JSON(http.StatusOK, map[string]string{"result": "failed", "msg": "Failed to get ASN"})
 	}
 
-	err = branchChange(fmt.Sprintf("%d", info.AsNumber), info.AsDescription)
+	err = branchChange(info)
 	if err != nil && err.Error() == "Branch exists" {
 		log.Println(err)
 		return c.JSON(http.StatusOK, map[string]string{"result": "existing", "msg": "ASN already reported to us"})

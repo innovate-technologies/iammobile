@@ -14,7 +14,7 @@ import (
 	"gopkg.in/src-d/go-git.v4/storage/memory"
 )
 
-func branchChange(asn, asndesc string) error {
+func branchChange(info *asnInfo) error {
 	r, err := git.Clone(memory.NewStorage(), memfs.New(), &git.CloneOptions{
 		URL: fmt.Sprintf("https://%s:%s@%s", os.Getenv("GH_USERNAME"), os.Getenv("GH_TOKEN"), "github.com/innovate-technologies/mobile-asn"),
 	})
@@ -42,7 +42,7 @@ func branchChange(asn, asndesc string) error {
 		return err
 	}
 
-	branchName := plumbing.ReferenceName(fmt.Sprintf("refs/heads/add-%s", asn))
+	branchName := plumbing.ReferenceName(fmt.Sprintf("refs/heads/add-%d-%s", info.AsNumber, info.FirstIP))
 	branches, err := bare.Branches()
 	if err != nil {
 		return err
@@ -78,7 +78,7 @@ func branchChange(asn, asndesc string) error {
 		return err
 	}
 
-	_, err = f.Write([]byte(fmt.Sprintf("%s\t%s\t1\n", asn, asndesc)))
+	_, err = f.Write([]byte(fmt.Sprintf("%d\t%s\t%s\t%s\t1\n", info.AsNumber, info.AsDescription, info.FirstIP, info.LastIP)))
 	if err != nil {
 		return err
 	}
@@ -91,7 +91,7 @@ func branchChange(asn, asndesc string) error {
 	if err != nil {
 		return err
 	}
-	commit, err := w.Commit(fmt.Sprintf("Add ASN %s", asn), &git.CommitOptions{
+	commit, err := w.Commit(fmt.Sprintf("Add ASN %d", info.AsNumber), &git.CommitOptions{
 		Parents: []plumbing.Hash{ref.Hash()},
 		Author: &object.Signature{
 			Name:  "I Am Mobile",
