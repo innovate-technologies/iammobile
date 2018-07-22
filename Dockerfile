@@ -18,4 +18,5 @@ COPY --from=build /go/src/github.com/innovate-technologies/iammobile/html /opt/i
 ENV GH_USERNAME=""
 ENV GH_TOKEN=""
 
+WORKDIR /opt/iammobile/
 CMD [ "/opt/iammobile/iammobile" ]
