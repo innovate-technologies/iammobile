@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"gopkg.in/src-d/go-billy.v3/memfs"
+	"gopkg.in/src-d/go-billy.v4/memfs"
 	git "gopkg.in/src-d/go-git.v4"
 	"gopkg.in/src-d/go-git.v4/config"
 	"gopkg.in/src-d/go-git.v4/plumbing"
