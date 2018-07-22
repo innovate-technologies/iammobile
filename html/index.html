@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="We are crowd sourcing a database of mobile (3G/4G) connections. Open this on your phone to help us out!">
+    <meta name="author" content="Maartje Eyskens">
+
+    <title>I am mobile</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="/submit.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <h1>I am mobile
+                <s</h1>
+                    <p class="lead">We are crowd sourcing a database of mobile (3G/4G/LTE/HSDPA/UTMS/EDGE/...) connections. And you can help
+                        us out by opening this page on your phone on a mobile connections and submitting your entry</p>
+        </div>
+        <h2>Get started</h2>
+        <div class="row">
+            <p>
+                <ol>
+                    <li>Take your phone out</li>
+                    <li>Go to https://iammobile.shoutca.st</li>
+                    <li>Make sure WiFi it turned off</li>
+                    <li>Press the "I Am Mobile" button</li>
+                </ol>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="alert alert-success hidden" role="alert" id="alertSuccess">
+                    Your entry has been added! Thank you for your contribution!
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="alert alert-danger hidden" role="alert" id="alertError">
+                    Something went wrong. Try again later.
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="alert alert-warning hidden" role="alert" id="alertExisting">
+                    Your provider has already been listed. Thank you for your contribution!
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <button type="button" class="btn btn-lg btn-block btn-success" id="btnSubmit" type="submit">
+                    <i class="fas fa-rocket" id="icon"></i> I Am Mobile</button>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+    </div>
+    <!-- /container -->
+</body>
+
+</html>
