@@ -12,9 +12,10 @@ FROM multiarch/alpine:${ARCH}-edge
 
 RUN apk add --no-cache ca-certificates
 
-COPY --from=build /go/src/github.com/innovate-technologies/iammobile/iammobile /usr/local/bin/iammobile
+COPY --from=build /go/src/github.com/innovate-technologies/iammobile/iammobile /opt/iammobile/iammobile
+COPY --from=build /go/src/github.com/innovate-technologies/iammobile/html /opt/iammobile/html
 
 ENV GH_USERNAME=""
 ENV GH_TOKEN=""
 
-CMD [ "iammobile" ]
+CMD [ "/opt/iammobile/iammobile" ]
