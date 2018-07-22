@@ -5,7 +5,7 @@ COPY ./ /go/src/github.com/innovate-technologies/iammobile
 WORKDIR /go/src/github.com/innovate-technologies/iammobile
 
 ARG GO_ARCH
-RUN CGO_ENABLED=0 GOOS=linux GOARCH="${GO_ARCH}" go build -a -installsuffix cgo -o ./
+RUN CGO_ENABLED=0 GOOS=linux GOARCH="${GO_ARCH}" go build -a -installsuffix cgo ./
 
 ARG ARCH
 FROM multiarch/alpine:${ARCH}-edge
