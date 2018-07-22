@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/labstack/echo"
 )
@@ -16,11 +17,15 @@ func main() {
 }
 
 func addMe(c echo.Context) error {
-	info, err := getASNInfo(c.RealIP())
+	ip := c.RealIP()
+	if strings.Index(ip, "::ffff:") == 0 { // fix nginx pseudo ipv6 forward
+		ip = strings.Replace(ip, "::ffff:", "", 1)
+	}
+	info, err := getASNInfo(ip)
 	if err != nil || !info.Announced {
 		log.Println(err)
 		log.Println(info)
-		log.Println(c.RealIP())
+		log.Println(ip)
 		return c.JSON(http.StatusOK, map[string]string{"result": "failed", "msg": "Failed to get ASN"})
 	}
 
