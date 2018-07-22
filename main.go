@@ -19,6 +19,8 @@ func addMe(c echo.Context) error {
 	info, err := getASNInfo(c.RealIP())
 	if err != nil || !info.Announced {
 		log.Println(err)
+		log.Println(info)
+		log.Println(c.RealIP())
 		return c.JSON(http.StatusOK, map[string]string{"result": "failed", "msg": "Failed to get ASN"})
 	}
 
