@@ -24,7 +24,7 @@ func init() {
 func createPR(info *asnInfo) error {
 
 	base := "master"
-	head := fmt.Sprintf("add-%d", info.AsNumber)
+	head := fmt.Sprintf("add-%d-%s", info.AsNumber, info.FirstIP)
 	title := fmt.Sprintf("Add ASN %d", info.AsNumber)
 	body := fmt.Sprintf("This PR adds ASN `%d` which is known as `%s` in `%s` to the list of mobile ASNs.\n\nThis AS has IPs from `%s` to `%s`.\n\nPlease verify this is not a false positive\n\n\n*This is an automated PR*", info.AsNumber, info.AsDescription, info.AsCountryCode, info.FirstIP, info.LastIP)
 
