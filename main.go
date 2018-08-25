@@ -16,7 +16,9 @@ func main() {
 }
 
 func addMe(c echo.Context) error {
-	ip := c.RealIP()
+	xff := c.Request().Header.Get("X-Forwarded-For")
+	ips := strings.Split(xff, " ")
+	ip := ips[len(ips)-1]
 	if strings.Index(ip, "::ffff:") == 0 { // fix nginx pseudo ipv6 forward
 		ip = strings.Replace(ip, "::ffff:", "", 1)
 	}
