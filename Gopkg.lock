@@ -57,12 +57,12 @@
   version = "0.4"
 
 [[projects]]
-  digest = "1:78f6688d5303263ee19fcb093ecd4b3d7bc01551990a5367878d33e02edba0a0"
+  digest = "1:a34af585a74e2d7643d80fb8281f28f8a9dbe42a97138aebc2f048157602e626"
   name = "github.com/labstack/echo"
   packages = ["."]
   pruneopts = ""
-  revision = "6d227dfea4d2e52cb76856120b3c17f758139b4e"
-  version = "3.3.5"
+  revision = "c8e923cf549085c881920b0fd293f854558cdd1b"
+  version = "v4.1.0"
 
 [[projects]]
   digest = "1:2380b9c75b541a363edb1d1c1854c412f927e2265d3b69a9f9c2e42e384c15b4"
