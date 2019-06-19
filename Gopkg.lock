@@ -186,6 +186,8 @@
   packages = [
     "context",
     "context/ctxhttp",
+    "internal/socks",
+    "proxy",
   ]
   pruneopts = ""
   revision = "a680a1efc54dd51c040b3b5ce4939ea3cf2ea0d1"
@@ -211,21 +213,6 @@
   ]
   pruneopts = ""
   revision = "ac767d655b305d4e9612f5f6e33120b9176c4ad4"
-
-[[projects]]
-  digest = "1:5acd3512b047305d49e8763eef7ba423901e85d5dd2fd1e71778a0ea8de10bd4"
-  name = "golang.org/x/text"
-  packages = [
-    "internal/gen",
-    "internal/triegen",
-    "internal/ucd",
-    "transform",
-    "unicode/cldr",
-    "unicode/norm",
-  ]
-  pruneopts = ""
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
 
 [[projects]]
   digest = "1:c1771ca6060335f9768dff6558108bc5ef6c58506821ad43377ee23ff059e472"
@@ -259,12 +246,13 @@
   version = "v4.2.0"
 
 [[projects]]
-  digest = "1:72401bfad0edfdfc6a1ee76399a08ca9ae3753d6851465d2a9ab92f728cdba43"
+  digest = "1:8e236ab1e1545b3a46c8231747cd5ac34924c721ba2009f92872923b2023d980"
   name = "gopkg.in/src-d/go-git.v4"
   packages = [
     ".",
     "config",
     "internal/revision",
+    "internal/url",
     "plumbing",
     "plumbing/cache",
     "plumbing/filemode",
@@ -304,8 +292,8 @@
     "utils/merkletrie/noder",
   ]
   pruneopts = ""
-  revision = "7b6c1266556f59ac436fada3fa6106d4a84f9b56"
-  version = "v4.6.0"
+  revision = "f9a30199e7083bdda8adad3a4fa2ec42d25c1fdb"
+  version = "v4.12.0"
 
 [[projects]]
   digest = "1:ceec7e96590fb8168f36df4795fefe17051d4b0c2acc7ec4e260d8138c4dafac"
