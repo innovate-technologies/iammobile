@@ -25,12 +25,12 @@
   version = "v1.1.0"
 
 [[projects]]
-  digest = "1:6c8f16c9eb1dc1ef91d93e83674f248c064a6f5dde90b47d7b495db31459bd1f"
+  digest = "1:f3860a48198aec7de87621c71245c5ecdaf83ca5e5d9b3bf090a8849fd35ef51"
   name = "github.com/google/go-github"
   packages = ["github"]
   pruneopts = ""
-  revision = "747f93dd9b489bd56f7442b3c42bfea12800a75b"
-  version = "v17.0.0"
+  revision = "cbe45b0df73f1c7e08497180a4cb754eb5b757b3"
+  version = "v26.0.7"
 
 [[projects]]
   branch = "master"
