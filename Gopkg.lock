@@ -57,12 +57,12 @@
   version = "0.4"
 
 [[projects]]
-  digest = "1:78f6688d5303263ee19fcb093ecd4b3d7bc01551990a5367878d33e02edba0a0"
+  digest = "1:864154120a39813bcdf312aeed41d483fbc6dff06151c2b5f174afe055d25968"
   name = "github.com/labstack/echo"
   packages = ["."]
   pruneopts = ""
-  revision = "6d227dfea4d2e52cb76856120b3c17f758139b4e"
-  version = "3.3.5"
+  revision = "b0f56eaf969bf5f8a6e4b6727f3f5fc7f44f36a0"
+  version = "v4.2.0"
 
 [[projects]]
   digest = "1:2380b9c75b541a363edb1d1c1854c412f927e2265d3b69a9f9c2e42e384c15b4"
@@ -181,14 +181,19 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:00ff990baae4665bb0a8174af5ff78228574227ed96c89671247a56852a50e21"
+  digest = "1:d2edc411d5aefd62c4e5167e9353bf4a0c61c6d8cf7f790bab77b4096b43f503"
   name = "golang.org/x/net"
   packages = [
     "context",
     "context/ctxhttp",
+    "http/httpguts",
+    "http2",
+    "http2/h2c",
+    "http2/hpack",
+    "idna",
   ]
   pruneopts = ""
-  revision = "a680a1efc54dd51c040b3b5ce4939ea3cf2ea0d1"
+  revision = "5f4716e94777e714bc2fb3e3a44599cb40817aac"
 
 [[projects]]
   branch = "master"
@@ -216,12 +221,20 @@
   digest = "1:5acd3512b047305d49e8763eef7ba423901e85d5dd2fd1e71778a0ea8de10bd4"
   name = "golang.org/x/text"
   packages = [
+    "collate",
+    "collate/build",
+    "internal/colltab",
     "internal/gen",
+    "internal/tag",
     "internal/triegen",
     "internal/ucd",
+    "language",
+    "secure/bidirule",
     "transform",
+    "unicode/bidi",
     "unicode/cldr",
     "unicode/norm",
+    "unicode/rangetable",
   ]
   pruneopts = ""
   revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
