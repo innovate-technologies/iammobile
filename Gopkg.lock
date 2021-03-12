@@ -192,14 +192,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:b697592485cb412be4188c08ca0beed9aab87f36b86418e21acc4a3998f63734"
+  digest = "1:2614ca8a083231466ef413d423a7c3d97261ba9fabd5f189a5b0bcf3d1d58024"
   name = "golang.org/x/oauth2"
   packages = [
     ".",
     "internal",
   ]
   pruneopts = ""
-  revision = "d2e6202438beef2727060aa7cabdd924d92ebfd9"
+  revision = "5366d9dc1934b408dc3682b22f69674507481b04"
 
 [[projects]]
   branch = "master"
