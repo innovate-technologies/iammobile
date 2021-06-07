@@ -22,7 +22,7 @@
 
 [[constraint]]
   name = "github.com/google/go-github"
-  version = "17.0.0"
+  version = "35.3.0"
 
 [[constraint]]
   name = "github.com/labstack/echo"
